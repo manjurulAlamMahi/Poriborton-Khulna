@@ -144,10 +144,19 @@
 }
 
 @media (max-width: 768px){
+    /* Reports */
+
+    .gallery .controls {
+        justify-content: start;
+    }
+    .gallery .controls li 
+    {
+        width: 100%;
+    }
 
     .home
     {
-        margin-bottom: 450px;
+        margin-bottom: 375px;
     }
     .home .box-container{
         display: -ms-flex;
@@ -163,11 +172,11 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .home .box-container .box-item .card{
-        width: 100%;
+        width: 80%;
         margin: 10px 0;
-        height: 200px;
         margin: 10px 5px 10px 0px;
         border: 1px solid var(--secondary-color);
         border-radius: 5px;
@@ -187,7 +196,7 @@
         justify-content: space-between;
     }
     .home .box-container .box-item .card .card-body .image {
-        width: 48%;
+        width: 46%;
         height: 100px;
         margin: 5px;
     }
@@ -207,7 +216,6 @@
     section, .header .header-1, .header .header-2{
         padding: 2rem;
     }
-
     .footer{
         padding: 0rem 2rem;
     }
@@ -227,10 +235,11 @@
     
 }
 
-@media (max-width: 450px){
+@media (min-width:769px) and (max-width:857px)
+{
     .home
     {
-        margin-bottom: 450px;
+        margin-bottom: 180px;
     }
     .home .box-container{
         display: -ms-flex;
@@ -246,11 +255,37 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .home .box-container .box-item .card{
+        width: 48%;
+    }
+}
+
+@media (max-width: 450px){
+    .home
+    {
+        margin-bottom: 375px;
+    }
+    .home .box-container{
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .home .box-container .box-item:first-child{
         width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .home .box-container .box-item:last-child{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .home .box-container .box-item .card{
+        width: 80%;
         margin: 10px 0;
-        height: 200px;
         margin: 10px 5px 10px 0px;
         border: 1px solid var(--secondary-color);
         border-radius: 5px;
@@ -270,7 +305,7 @@
         justify-content: space-between;
     }
     .home .box-container .box-item .card .card-body .image {
-        width: 48%;
+        width: 46%;
         height: 100px;
         margin: 5px;
     }
@@ -326,6 +361,17 @@
 
     .testimonial-slider{
         margin: 0rem;
+    }
+
+
+    /* Reports */
+
+    .gallery .controls {
+        justify-content: start;
+    }
+    .gallery .controls li 
+    {
+        width: 100%;
     }
     
 }

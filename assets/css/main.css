@@ -1595,9 +1595,10 @@ section{
 }
 .home .box-container .box-item:last-child{
     width: 30%;
+    align-self: center;
 }
 .home .box-container .box-item .card{
-    height: 200px;
+    height: 155px;
     margin: 20px 5px 20px 0px;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
@@ -1626,6 +1627,10 @@ section{
     height: 100px;
     margin: 10px;
 }
+.home .box-container .box-item .card .card-body .content .name
+{
+    color: var(--secondary-color);
+}
 .home .box-container .box-item .card .card-body .content ul li{
     margin: 2px 0;
 }
@@ -1640,7 +1645,12 @@ section{
 .home-slider{ 
     position: relative; 
 }
-  
+
+.swiper-slide
+{
+    width: 100% !important;
+}
+
 .home-slider .swiper-button-next,
 .home-slider .swiper-button-prev{
     background-color: var(--main-color);
@@ -3537,6 +3547,48 @@ section{
 /*--------------- PAGES ---------------*/
 
 /*----- 1- Gallery -----*/
+#reports .box-container .gallery-item
+{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 38rem;
+        flex: 1 1 38rem;
+        height: inherit;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin: 10px 5px;
+}
+
+#ctet .controls {
+  gap: 0.5rem;
+}
+#ctet .box-container .box-item
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ctet .box-container .box-item .imgs
+{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#ctet .box-container .box-item .content
+{
+    width: 58%;
+    margin-left: 20px;
+}
+#ctet .box-container .box-item .content .text p
+{
+    color: var(--grey);
+    text-align: justify;
+    line-height: 20px;
+}
+#ctet .box-container .box-item .imgs .img-items
+{
+    width: 47.9%;
+    margin: 0 5px;
+}
+
 .gallery .controls{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4851,13 +4903,31 @@ input[type="range"]::-moz-range-thumb{
     padding: 1rem 0.5rem;
     margin-bottom: 1rem;
 }
+.shoplist-title.notice-list{
+    background-color: var(--white);
+    color: var(--grey);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+}
 
-.shoplist-title h3{
+.shoplist-title.notice-list p{
     -webkit-box-flex: 1;
     -ms-flex: 1 1 10rem;
         flex: 1 1 10rem;
     font-size: 1.8rem;
-    text-align: center;
+}
+
+.shoplist-title h3{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 20rem;
+        flex: 1 1 20rem;
+    font-size: 1.8rem;
 }
 
 .shoplist-title h3.product-heading{
@@ -4926,8 +4996,8 @@ input[type="range"]::-moz-range-thumb{
 .shop .product-container.grid{
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    -ms-grid-columns: (minmax(39rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr));
     gap: 1.5rem;
 }
 
@@ -5324,6 +5394,10 @@ input[type="range"]::-moz-range-thumb{
     border-radius: 0.5rem;
 }
 
+.checkout .box-2 .content ul li
+{
+    line-height: 26px;
+}
 /*-- 1- Billing Address --*/
 /*-- 2- Shipping Address --*/
 .checkout .form{
@@ -5417,7 +5491,6 @@ input[type="range"]::-moz-range-thumb{
     -webkit-box-flex: 1;
     -ms-flex: 1 1 15rem;
         flex: 1 1 15rem;
-    text-align: center;
     font-size: 2rem;
     font-weight: 400;
     color: var(--black);
@@ -5773,18 +5846,30 @@ input[type="range"]::-moz-range-thumb{
 
 
 /*------------------------------ (09)-Contact (Start) ------------------------------*/
-.contact{
+#contact{
     padding: 2rem 0;
 }
+
+#contact .contact{
+    background: var(--secondary-color);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+#contact .contact h3{
+    color: var(--white);
+    font-size: 42px !important;
+}
+#contact .contact ul li p{
+    color: var(--white);
+    margin: 10px 0;
+    font-size: 22px !important;
+}
+#contact .contact ul li i{
+    margin-right: 15px;
+}
+
  
 /*-- Google Map --*/
-.contact iframe{ 
-    width: 100%;
-    height: 40rem;
-    margin-bottom: 2rem;
-    -webkit-box-shadow: var(--box-shadow);
-            box-shadow: var(--box-shadow);
-}
 
 .contact-container{
     position: relative;
